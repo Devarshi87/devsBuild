@@ -1,0 +1,24 @@
+:host {
+    --slds-c-card-color-background: #c4cbcfbf;
+    
+}
+.slds-modal__content{
+    overflow: initial;
+}
+
+.daterangeDes{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    padding:3px;
+    }
+
+    .consoleSec{
+        background-color: black;
+        color: white;
+        padding: 3px;
+        border-radius: 3px;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }

@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : Devarshi Mishra
+  @group             : 
+  @last modified on  : 06-05-2024
+  @last modified by  : Devarshi Mishra
+-->
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-box_small">
+
+            <div class="slds-col">
+                <span>
+                    <lightning-combobox 
+                        name="dateFilter" 
+                        label="Select Range" 
+                        value={dateFilter}
+                        placeholder="Select Date Filter" 
+                        dropdown-alignment="auto"
+                        options={dateOptions} 
+                        onchange={handleDateChange}></lightning-combobox>
+                </span>
+                <div class="daterangeDes">No Of Days Selected : {range} {startDateLoc} ➔ {endDateLoc}</div>
+            </div>
+            
+            
+                <template if:true={showDateRange}>
+                    <div class="slds-col" >
+                    <span>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-m-left_large">
+                                <lightning-input type="date" name="startdate" class="startdate" label="Start Date"
+                                    value={start_date} onchange={handleDateChange} ></lightning-input>
+                            </div>
+                            <div class="slds-col slds-m-right_large">
+                                <lightning-input type="date" name="enddate" class="enddate" label="End Date"
+                                    value={end_date} onchange={handleDateChange} ></lightning-input>
+                            </div>
+                            
+                        </div>
+                       
+                    </span>
+                    </div>
+                </template>
+           
+            <div class="slds-col" style="margin-top: 1.4rem;">
+                <!-- <br/> -->
+                <lightning-button variant="brand" label={buttonLabel} title={buttonLabel} onclick={handleFilterByDate}
+                    class="slds-m-left_x-small"></lightning-button>
+
+            
+            </div>
+        </div>
+        
+    </lightning-card>
+    <lightning-card>
+        <div class="consoleSec">{rangeFilterString}</div>
+    </lightning-card>
+</template>
