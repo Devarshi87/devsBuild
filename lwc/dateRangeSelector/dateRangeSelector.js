@@ -112,11 +112,11 @@ export default class DateRangeSelector extends LightningElement {
                 
                 this.start_date =  this.today.toJSON().slice(0,10);
                 this.end_date = this.addDays(this.today,1).toJSON().slice(0,10);
-                this.buttonLabel = 'Get Readings'
+               // this.buttonLabel = 'Filter Button'
             }
             else{
                 this.showDateRange = false;
-                this.buttonLabel = 'Refresh Readings'
+               // this.buttonLabel = 'Filter Button'
                 // dtObj = this.fetchFilterDates(this.dateFilter);
                 
                 // console.log('date filter val=>',dtObj);
